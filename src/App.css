@@ -1,63 +1,278 @@
-main{
+main {
   width: 100%;
   height: 80vh;
+  display: flex;
+  background: linear-gradient(90deg, #111 0%, #000 70%);
 }
-header{
+
+.sair{
+  width: 5%;
+  height: 5vh;
+  margin-right: 3%;
+  display: flex;
+  background: none;
+}
+
+.sparkle{
+  color: #c00000;
+  width:auto;
+  height: auto;
+}
+.sparkle1{
+  color: #c00000;
+}
+/* HEADER */
+header {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.titulo{
+  width: 12px;
+  margin-right: 46%;
+  margin-top: 6.67%;
+  color: white;
+}
+
+.record {
+  margin-top: 6.8%;
+  width: 10%;
+  height: 3vh;
+
+}
+
+/* LADO ESQUERDO */
+.pontos {
+  width: 30%;
+  height: 70vh;
+  display: flex;
+  margin-top: 6.5%;
+}
+
+/* LADO DIREITO */
+.cards {
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 7%;
+}
+
+.times {
   width: 100%;
   height: 15vh;
-  background-color: #000000;
-}
-header button{
   display: flex;
   flex-direction: row;
-  margin-left: 90%;
+  gap: 5px;
+  padding: 0 2%;
+  border-radius: 10px;
+  /* preto com leve vermelho (detalhe) */
+  background: linear-gradient(
+    90deg,
+    rgba(30, 30, 30, 0.7) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 13, 13, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
-.pontos{
-  width: 30%;
-  height: 60vh;
-  background-color: #ff0000;
+
+.personagens{
+  width: 10%;
+  height: 9vh;
+  /* background-color: #3b3b3b;  */
+  border-radius: 50%;
+  margin-top: 0.6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.cards{
-  width: 65%;
-  height: 60vh;
-  background-color: #3700ff;
-  margin-left: 32%;
-  margin-top: -28.78%;
-  display: flex;  
-  flex-direction: column;
-}
-.times{
+.personagens img{
   width: 100%;
-  height: 90vh;
-  background-color: #a200ff;
+  height: auto;
 }
-.inimigos{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  width: 30%;
-  height: 13vh;
-  background-color: #fff;
-}
-footer{
+
+/* FOOTER */
+footer {
   width: 100%;
   height: 20vh;
-  background-color: #000000;
+  background: linear-gradient(90deg, #111 0%, #000 70%);
 }
-footer button{
-  margin-top: 10px;
-}
-.res {
+
+/* INIMIGOS */
+.inimigos {
+  margin-left: 1.5%;
+  width: 50%;
   display: flex;
-  flex-direction: row;
   gap: 10px;
-  margin-top: -30px;
-  margin-left: 50%;
+  height: 10vh;
 }
-.res button{
+
+.monstros {
+  width: 15%;
+  height: 10vh;
+  /* background-color: #222; */
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.monstros img{
+  width: auto;
+  height: 100%;
+}
+
+/* BOTÃO VER INIMIGOS */
+.cont{
   width: 30%;
   height: 5vh;
 }
-.res .umacoisa {
-  width: 15%;
+
+.ver {
+  width: 50%;
+  height: 3vh;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+/* BOTÕES DA DIREITA */
+.res {
+  width: 30%;
+  height: 5vh;
+  margin-left: 70%;
+  gap: 5%;
+  margin-top: -3%;
+  display: flex;
+}
+
+.umacoisa{
+  width: 30%;
+  height: 5vh;
+}
+
+.duascoisa {
+  width: 50%;
+  height: 5vh;
+}
+
+/* padronizacoes */
+button{
+  border-radius: 3px;
+  background-color: #d4d4d4;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.fdp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lorelei{
+  display: flex;
+  overflow: hidden;
+}
+
+/* Animação*/
+.personagens,
+.monstros,
+.times .personagens {
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+.personagens:hover,
+.times .personagens:hover {
+  transform: scale(1.12);
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(255, 255, 255, 0.7),
+    0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+.monstros {
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.monstros:hover {
+  transform: scale(1.12);
+
+  box-shadow:
+    0 -10px 12px rgba(255, 0, 0, 0.6),
+    0 -20px 25px rgba(255, 0, 0, 0.3),
+    0 10px 12px rgba(255, 0, 0, 0.6),
+    0 20px 25px rgba(255, 0, 0, 0.3);
+}
+
+.times,
+button  {
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.times:hover,
+button:hover {
+  transform: translateY(-6px) scale(1.03);
+
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 255, 255, 0.6),
+    0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+.sparkle,
+.sparkle1 {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              background-color 0.35s ease;
+}
+
+.sparkle:hover,
+ .sparkle1:hover{
+  transform: translateY(-3px) scale(1.02);
+  background-color: transparent;
+  box-shadow: none;
+}
+.sair {
+  transition: none;
+}
+
+.sair:hover {
+  transform: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* coisas que o chat fez pq nao sebo  */
+.preview {
+  width: 100%;
+  height: auto;
+  animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
