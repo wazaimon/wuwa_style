@@ -12,9 +12,9 @@ import jiyan from './assets/jiyan.png'
 import calcharo from './assets/calcharo.png'
 import baizhi from './assets/baizhi.png'
 import mortefi from './assets/mortefi.png'
-import mecha from './assets/mecha.png'
-import fdp from './assets/fdp.png'
-import fleurdelys from './assets/fleurdelys.png'
+import mecha from './assets/sigillum.png'
+import reactor from './assets/reactor.png'
+import leviathan from './assets/leviathan.png'
 import jue from './assets/jué.png'
 import lorelei from './assets/lorelei.png'
 
@@ -104,7 +104,7 @@ export default function App() {
             onMouseEnter={() => setHoverMonster(fdp)}
             onMouseLeave={() => setHoverMonster(null)}
           >
-            <img src={fdp} className='fdp' alt="fdp" />
+            <img src={reactor} className='reactor' alt="reactor" />
           </div>
 
           <div
@@ -112,7 +112,7 @@ export default function App() {
             onMouseEnter={() => setHoverMonster(fleurdelys)}
             onMouseLeave={() => setHoverMonster(null)}
           >
-            <img src={fleurdelys} alt="fleurdelys" />
+            <img src={leviathan} alt="leviathan" />
           </div>
 
           <div
